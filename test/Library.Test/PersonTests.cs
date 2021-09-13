@@ -6,16 +6,18 @@ namespace Tests
 {
     public class Tests
     {
-        [SetUp]
-        public void Setup()
-        {
-            // Insertá tu código de inicialización aquí
-        }
+        // [SetUp]
+        // public void Setup()
+        // {
+        //     // Insertá tu código de inicialización aquí
+        // }
 
         [Test]
-        public void Test1() // Cambiá el nombre para indicar qué estás probando
+        public void TestValidID() // Cambiá el nombre para indicar qué estás probando
         {
-            // Insertá tu código  de pruebaaquí
+            Person person = new Person("Juan Nocetti","5.390.966-5");
+            person.ID= "8.765.432-1";
+            Assert.AreEquals("8.765.432-1",person.ID)
         }
     }
 }
